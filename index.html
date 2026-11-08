@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diwali Wishes from Priyanshu</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;overflow:hidden;color:#fff8df;font-family:Georgia,serif;background:radial-gradient(circle at 50% 15%,#542044 0,#1b102b 48%,#090817 100%)}
+.card{width:min(92vw,620px);padding:34px 25px;text-align:center;border:1px solid #d8a84b;border-radius:26px;background:linear-gradient(145deg,#2a102bdf,#100d25ee);box-shadow:0 0 45px #ffb52c35;position:relative;z-index:2}
+.kicker{color:#ffd778;letter-spacing:4px;font:600 12px Arial,sans-serif}.heart{border:0;background:none;font-size:76px;cursor:pointer;filter:drop-shadow(0 0 15px #ff4b71);animation:pulse 1.3s infinite}.heart:focus-visible{outline:2px solid white;border-radius:16px}@keyframes pulse{50%{transform:scale(1.13)}}
+h1{font-size:clamp(28px,7vw,44px);color:#ffdc86;margin:15px 0;text-shadow:0 0 18px #ffb52c66}.hint{font:15px Arial,sans-serif;color:#f4d9bd}.message{display:none;animation:rise 1s ease both}.message.show{display:block}@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.poem{font-size:18px;line-height:1.7;color:#ffe9bc;margin:20px 0}.body{font:15px/1.8 Arial,sans-serif;color:#fff1dc}.sign{color:#ffd778;font: bold 18px Arial,sans-serif;margin-top:22px}.spark{position:fixed;left:50%;top:38%;width:7px;height:7px;border-radius:50%;pointer-events:none;z-index:5;animation:burst 1.3s ease-out forwards;box-shadow:0 0 12px currentColor}
+@keyframes burst{0%{transform:translate(0,0) scale(.4);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(0);opacity:0}}
+.diya{font-size:26px;margin:18px 5px 0;filter:drop-shadow(0 0 9px #ffad35)}
+</style></head>
+<body><main class="card"><div class="kicker">A FESTIVE SURPRISE</div><div id="intro"><h1>A little Diwali surprise<br>for you ✨</h1><p class="hint">Tap the heart to light up your wishes</p><button class="heart" id="heart" aria-label="Open Diwali wishes">❤️</button></div>
+<section class="message" id="message"><div class="diya">🪔 ✨ 🪔</div><h1>शुभ दीपावली!</h1><h2 style="color:#ffe6ad;font-size:22px">Happy Diwali, Govardhan Puja & Bhai Dooj</h2><p class="body">आपको एवं आपके पूरे परिवार को दीपावली, गोवर्धन पूजा और भाई दूज की हार्दिक शुभकामनाएँ। 🙏<br>माँ लक्ष्मी और श्री गणेश जी की कृपा आप सभी पर सदैव बनी रहे। आपके जीवन में सुख, शांति, उत्तम स्वास्थ्य, समृद्धि और सफलता का वास हो।</p><div class="poem">हर घर में खुशियों का उजियारा हो,<br>हर चेहरे पर मुस्कान का नज़ारा हो।<br>रिश्तों में प्रेम और अपनों का साथ बना रहे,<br>आपका हर दिन दीपों के त्योहार-सा प्यारा हो। ❤️</div><p class="body">ईश्वर से प्रार्थना है कि आने वाला समय आप सभी के लिए नई उम्मीदें, खुशियाँ और अपार सफलता लेकर आए।</p><div class="sign">सप्रेम एवं सादर,<br>Priyanshu Agrawal</div><div class="diya">🪔 शुभ दीपावली 🪔</div></section></main>
+<script>
+const heart=document.getElementById('heart'), intro=document.getElementById('intro'), message=document.getElementById('message');let opened=false;
+heart.addEventListener('click',()=>{if(opened)return;opened=true;intro.style.display='none';const colors=['#ffd166','#ff7b54','#fff1a8','#ff4d6d','#ffffff'];for(let i=0;i<90;i++){const s=document.createElement('i');s.className='spark';s.style.color=colors[i%colors.length];s.style.setProperty('--x',(Math.random()*520-260)+'px');s.style.setProperty('--y',(Math.random()*440-220)+'px');s.style.left='50%';s.style.top='42%';s.style.animationDelay=(Math.random()*.25)+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),1700)}setTimeout(()=>message.classList.add('show'),650)});
+</script></body></html>
